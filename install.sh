@@ -264,7 +264,7 @@ step "Configs"
 if [[ -d $REPO/.git ]]; then
     run git -C "$REPO" submodule update --init --recursive
 fi
-[[ -f $REPO/.config/quickshell/ii/modules/common/widgets/shapes/ShapeCanvas.qml ]] ||
+$DRY_RUN || [[ -f $REPO/.config/quickshell/ii/modules/common/widgets/shapes/ShapeCanvas.qml ]] ||
     warn "the shapes submodule is empty; clone the repo with git, not as a zip download"
 
 shopt -s nullglob dotglob
