@@ -41,7 +41,6 @@
     },
     "wallpaperTheming": {
       "enableAppsAndShell": true,
-      "enableQtApps": true,
       "enableTerminal": true,
       "terminalGenerationProps": {
         "forceDarkMode": false,

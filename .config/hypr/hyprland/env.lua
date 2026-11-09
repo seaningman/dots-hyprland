@@ -9,8 +9,8 @@ hl.env("XDG_DATA_DIRS", home_dir .. "/.local/share/flatpak/exports/share:/var/li
 
 -- Themes
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
-hl.env("QT_QPA_PLATFORMTHEME", "kde")
-hl.env("XDG_MENU_PREFIX", "plasma-")
+-- No Qt platform theme is set, so tell Quickshell which icon theme to use
+hl.env("QS_ICON_THEME", "breeze-dark")
 
 -- Virtual environment
 hl.env("ILLOGICAL_IMPULSE_VIRTUAL_ENV", home_dir .. "/.local/state/quickshell/.venv")
