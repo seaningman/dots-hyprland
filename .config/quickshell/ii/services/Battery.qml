@@ -27,6 +27,26 @@ Singleton {
     property bool isSuspendingAndNotCharging: allowAutomaticSuspend && isSuspending && !isCharging
     property bool isFullAndCharging: isFull && isCharging
 
+    readonly property bool chargeLimitEnabled: Config.options.battery.chargeLimit
+    readonly property int chargeLimitValue: Config.options.battery.chargeLimitValue
+    readonly property string batterySysfs: "/sys/class/power_supply/BAT0"
+
+    // Stop charging at the limit; resume only 5% below it to avoid constant top-ups
+    function applyChargeLimit() {
+        if (!Config.ready) return;
+        const end = chargeLimitEnabled ? chargeLimitValue : 100;
+        const start = chargeLimitEnabled ? Math.max(0, chargeLimitValue - 5) : 0;
+        // Lower start first when raising the limit, so start < end always holds
+        Quickshell.execDetached(["bash", "-c",
+            `cd '${batterySysfs}' && echo 0 > charge_control_start_threshold; echo ${end} > charge_control_end_threshold && echo ${start} > charge_control_start_threshold`]);
+    }
+    onChargeLimitEnabledChanged: applyChargeLimit()
+    onChargeLimitValueChanged: applyChargeLimit()
+    Connections {
+        target: Config
+        function onReadyChanged() { root.applyChargeLimit() }
+    }
+
     property real energyRate: UPower.displayDevice.changeRate
     property real timeToEmpty: UPower.displayDevice.timeToEmpty
     property real timeToFull: UPower.displayDevice.timeToFull

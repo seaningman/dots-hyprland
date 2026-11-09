@@ -290,6 +290,8 @@ Singleton {
                 property int full: 101
                 property bool automaticSuspend: true
                 property int suspend: 3
+                property bool chargeLimit: true
+                property int chargeLimitValue: 80
             }
 
             property JsonObject calendar: JsonObject {

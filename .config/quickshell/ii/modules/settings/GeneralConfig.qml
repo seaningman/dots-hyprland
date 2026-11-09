@@ -127,6 +127,32 @@ ContentPage {
                 }
             }
         }
+        ConfigRow {
+            uniform: false
+            Layout.fillWidth: false
+            ConfigSwitch {
+                buttonIcon: "battery_charging_80"
+                text: Translation.tr("Charge limit")
+                checked: Config.options.battery.chargeLimit
+                onCheckedChanged: {
+                    Config.options.battery.chargeLimit = checked;
+                }
+                StyledToolTip {
+                    text: Translation.tr("Stops charging at the set percentage to reduce battery wear")
+                }
+            }
+            ConfigSpinBox {
+                enabled: Config.options.battery.chargeLimit
+                text: Translation.tr("at")
+                value: Config.options.battery.chargeLimitValue
+                from: 50
+                to: 100
+                stepSize: 5
+                onValueChanged: {
+                    Config.options.battery.chargeLimitValue = value;
+                }
+            }
+        }
     }
 
     ContentSection {

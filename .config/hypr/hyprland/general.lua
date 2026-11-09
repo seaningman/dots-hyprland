@@ -95,7 +95,7 @@ hl.config({
             enabled = true,
             range = 20,
             offset = {0, 2},
-            render_power = 10,
+            render_power = 4,
             color = "rgba(00000020)"
 
         },
@@ -254,7 +254,7 @@ hl.animation({
 
 hl.config({
     input = {
-        kb_layout = "us",
+        kb_layout = "de",
         numlock_by_default = true,
         repeat_delay = 250,
         repeat_rate = 35,

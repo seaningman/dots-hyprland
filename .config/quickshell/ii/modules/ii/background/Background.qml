@@ -198,6 +198,15 @@ Variants {
                 height: bgRoot.scaledWallpaperHeight
             }
 
+            // Wallpaper change transition
+            WallpaperFxLayer {
+                anchors.fill: parent
+                zoom: bgRoot.parallaxRation
+                fractionX: wallpaper.usedFractionX
+                fractionY: wallpaper.usedFractionY
+                backgroundSettled: bgRoot.wallpaperPath === WallpaperFx.newPath && wallpaper.status === Image.Ready && !getWallpaperSizeProc.running
+            }
+
             Loader {
                 id: blurLoader
                 active: Config.options.lock.blur.enable && (GlobalStates.screenLocked || scaleAnim.running)
