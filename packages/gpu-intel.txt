@@ -1,0 +1,3 @@
+# Installed when an Intel GPU is detected.
+vulkan-intel
+intel-media-driver

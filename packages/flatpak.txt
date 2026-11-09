@@ -1,0 +1,3 @@
+# Flathub apps, one application ID per line.
+# Stremio: the AUR build needs qt5-webengine, which is no longer packaged.
+com.stremio.Stremio

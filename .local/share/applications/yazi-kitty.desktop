@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Yazi (Kitty)
+Comment=Open folders with yazi in a Kitty window
+Exec=kitty -1 yazi %f
+Icon=yazi
+MimeType=inode/directory;
+NoDisplay=true

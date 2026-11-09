@@ -1,0 +1,3 @@
+# Packages from the [multilib] repo. Installed only when multilib is enabled.
+steam
+lib32-mesa

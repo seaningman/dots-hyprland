@@ -1,0 +1,2 @@
+# Installed when an AMD GPU is detected.
+vulkan-radeon

@@ -3,3 +3,6 @@
 /hyprland/colors.lua
 /hyprlock/colors.conf
 /custom/scripts/__restore_video_wallpaper.sh
+# Monitor and workspace layout is per machine (nwg-displays writes these)
+/monitors.lua
+/workspaces.lua

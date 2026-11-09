@@ -1,16 +1,6 @@
-/diagnose.result
-/cache
-
-# Ignore Python cache files
+# Python cache files
 __pycache__/
 *.py[cod]
 
-
-# exp-update
-/.update-lock
-
-# custom os-release
-/os-release
-
-# Emacs auto backup file
+# Editor backup files
 *~

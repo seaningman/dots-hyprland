@@ -1,0 +1,2 @@
+# Intel GPU, 32-bit (for Steam). Needs multilib.
+lib32-vulkan-intel

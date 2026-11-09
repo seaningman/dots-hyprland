@@ -1,0 +1,148 @@
+# Official repo packages, one per line. Lines starting with # are comments.
+# Hardware-specific drivers are in the gpu-*.txt files; 32-bit packages in multilib.txt.
+
+# Hyprland session
+hyprland
+hyprsunset
+hypridle
+hyprlock
+hyprpicker
+hyprshot
+xdg-desktop-portal
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+polkit
+gnome-keyring
+libsecret
+wl-clipboard
+cliphist
+
+# Quickshell (the ii shell) and the Qt modules it imports
+quickshell
+qt6-5compat
+qt6-imageformats
+qt6-multimedia
+qt6-positioning
+qt6-quicktimeline
+qt6-sensors
+qt6-svg
+qt6-tools
+qt6-translations
+qt6-wayland
+kirigami
+
+# Audio
+pipewire
+pipewire-pulse
+pipewire-alsa
+wireplumber
+pavucontrol
+playerctl
+cava
+libdbusmenu-gtk3
+sof-firmware
+
+# Network and Bluetooth
+networkmanager
+nm-connection-editor
+bluez
+bluez-utils
+blueman
+
+# Brightness, power, location
+brightnessctl
+ddcutil
+geoclue
+upower
+power-profiles-daemon
+
+# Screenshots, OCR, recording
+grim
+slurp
+swappy
+tesseract
+tesseract-data-eng
+wf-recorder
+
+# Tools the shell and its scripts call
+bc
+curl
+wget
+jq
+go-yq
+rsync
+libnotify
+zenity
+imagemagick
+libqalculate
+songrec
+wtype
+ydotool
+fuzzel
+xdg-user-dirs
+xdg-utils
+usbutils
+
+# Python environment for the shell's scripts (built with uv)
+uv
+python
+gtk4
+libadwaita
+libsoup3
+libportal-gtk4
+gobject-introspection
+cmake
+clang
+
+# Terminal, shell, prompt
+kitty
+fish
+starship
+eza
+
+# Theme and fonts
+matugen
+adw-gtk-theme
+breeze-icons
+fontconfig
+ttf-jetbrains-mono-nerd
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+
+# Apps
+obsidian
+qalculate-gtk
+calibre
+komikku
+discord
+mpv
+yt-dlp
+imv
+zathura
+zathura-pdf-mupdf
+yazi
+ffmpegthumbnailer
+poppler
+
+# Editors and system tools
+vim
+nano
+fastfetch
+btop
+unzip
+7zip
+fwupd
+fprintd
+flatpak
+
+# Dev and CLI tools
+git
+github-cli
+nodejs
+npm
+fzf
+ripgrep
+fd
+zoxide
+bat

@@ -1,0 +1,16 @@
+# AUR packages, one per line.
+
+# Apps
+zen-browser-bin
+visual-studio-code-bin
+tork
+
+# Shell pieces not in the official repos
+wlogout
+qt6-avif-image-plugin
+bibata-cursor-theme-bin
+
+# Fonts the shell uses
+ttf-material-symbols-variable-git
+otf-space-grotesk
+ttf-readex-pro
