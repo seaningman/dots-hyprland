@@ -42,7 +42,7 @@ Gone with their modules: Super + A / B / O (left sidebar), Super + K (on-screen 
 
 ```sh
 sudo pacman -S --needed git
-git clone https://github.com/<your-username>/dots-hyprland ~/my-dots
+git clone https://github.com/seaningman/dots-hyprland ~/my-dots
 cd ~/my-dots
 ./install.sh --dry-run   # shows every action, changes nothing
 ./install.sh
@@ -55,7 +55,7 @@ The installer asks before each change to `/etc` (multilib, the keyring lines in 
 ### Existing system
 
 ```sh
-git clone https://github.com/<your-username>/dots-hyprland ~/my-dots
+git clone https://github.com/seaningman/dots-hyprland ~/my-dots
 cd ~/my-dots
 ./install.sh --dry-run
 ./install.sh
