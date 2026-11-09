@@ -1,22 +1,4 @@
 {
-  "ai": {
-    "extraModels": [
-      {
-        "api_format": "openai",
-        "description": "This is a custom model. Edit the config to add more! | Anyway, this is DeepSeek R1 Distill LLaMA 70B",
-        "endpoint": "https://openrouter.ai/api/v1/chat/completions",
-        "homepage": "https://openrouter.ai/deepseek/deepseek-r1-distill-llama-70b:free",
-        "icon": "spark-symbolic",
-        "key_get_link": "https://openrouter.ai/settings/keys",
-        "key_id": "openrouter",
-        "model": "deepseek/deepseek-r1-distill-llama-70b:free",
-        "name": "Custom: DS R1 Dstl. LLaMA 70B",
-        "requires_key": true
-      }
-    ],
-    "systemPrompt": "## Style\n- Use casual tone, don't be formal!\n- Always be brief and to the point, unless asked otherwise\n- Don't repeat the user's question\n- Be approachable: Avoid using overly complicated, domain-specific terms and provide analogies when asked to explain a concept\n\n## Context (ignore when irrelevant)\n- You are a helpful and inspiring sidebar assistant on a {DISTRO} Linux system\n- Desktop environment: {DE}\n- Current date & time: {DATETIME}\n- Focused app: {WINDOWCLASS}\n\n## Presentation\n- Use Markdown features in your response: \n  - **Bold** text to **highlight keywords** in your response\n  - **Split long information into small sections** with h2 headers and a relevant emoji at the start of it (for example `## 🐧 Linux`). Bullet points are preferred over long paragraphs, unless you're offering writing support or instructed otherwise by the user.\n- Asked to compare different options? You should firstly use a table to compare the main aspects, then elaborate or include relevant comments from online forums *after* the table. Make sure to provide a final recommendation for the user's use case!\n- Use LaTeX formatting for mathematical and scientific notations whenever appropriate. Enclose all LaTeX '$$' delimiters. NEVER generate LaTeX code in a latex block unless the user explicitly asks for it. DO NOT use LaTeX for regular documents (resumes, letters, essays, CVs, etc.).\n\nThanks!\n",
-    "tool": "functions"
-  },
   "appearance": {
     "extraBackgroundTint": true,
     "fakeScreenRounding": 2,
@@ -51,15 +33,14 @@
     }
   },
   "apps": {
-    "bluetooth": "kcmshell6 kcm_bluetooth",
+    "bluetooth": "blueman-manager",
     "changePassword": "kitty -1 --hold=yes fish -i -c 'passwd'",
-    "manageUser": "kcmshell6 kcm_users",
-    "network": "kcmshell6 kcm_networkmanagement",
-    "networkEthernet": "kcmshell6 kcm_networkmanagement",
-    "taskManager": "plasma-systemmonitor --page-name Processes",
+    "network": "nm-connection-editor",
+    "networkEthernet": "nm-connection-editor",
+    "taskManager": "kitty -1 btop",
     "terminal": "kitty -1",
     "update": "kitty -1 --hold=yes fish -i -c 'pkexec pacman -Syu'",
-    "volumeMixer": "~/.config/hypr/hyprland/scripts/launch_first_available.sh \"pavucontrol-qt\" \"pavucontrol\""
+    "volumeMixer": "pavucontrol"
   },
   "audio": {
     "protection": {
@@ -78,12 +59,9 @@
       "widgetsFactor": 1.2,
       "workspaceZoom": 1.07
     },
-    "thumbnailPath": "",
-    "wallpaperPath": "/home/xyz/Wallpapers/wallpaper_1920_upscayl_4x_upscayl-standard-4x.png",
     "widgets": {
       "clock": {
         "cookie": {
-          "aiStyling": false,
           "constantlyRotate": false,
           "dateInClock": true,
           "dateStyle": "bubble",
@@ -160,7 +138,6 @@
     "tooltips": {
       "clickToShow": false
     },
-    "topLeftIcon": "spark",
     "utilButtons": {
       "showColorPicker": false,
       "showDarkModeToggle": true,
@@ -215,9 +192,6 @@
     "autoKillNotificationDaemons": false,
     "autoKillTrays": false
   },
-  "crosshair": {
-    "code": "0;P;d;1;0l;10;0o;2;1b;0"
-  },
   "hacks": {
     "arbitraryRaceConditionDelay": 20
   },
@@ -233,19 +207,7 @@
     }
   },
   "language": {
-    "translator": {
-      "engine": "auto",
-      "sourceLanguage": "auto",
-      "targetLanguage": "auto"
-    },
     "ui": "auto"
-  },
-  "launcher": {
-    "pinnedApps": [
-      "org.kde.dolphin",
-      "kitty",
-      "cmake-gui"
-    ]
   },
   "light": {
     "antiFlashbang": {
@@ -265,7 +227,7 @@
       "radius": 100
     },
     "centerClock": true,
-    "launchOnStartup": true,
+    "launchOnStartup": false,
     "materialShapeChars": true,
     "security": {
       "requirePasswordToPower": false,
@@ -294,15 +256,6 @@
   "osd": {
     "timeout": 1000
   },
-  "overlay": {
-    "clickthroughOpacity": 0.8,
-    "darkenScreen": true,
-    "floatingImage": {
-      "imageSource": "https://media.tenor.com/H5U5bJzj3oAAAAAi/kukuru.gif",
-      "scale": 0.5
-    },
-    "openingZoomAnimation": true
-  },
   "overview": {
     "centerIcons": true,
     "columns": 5,
@@ -311,10 +264,6 @@
     "orderRightLeft": false,
     "rows": 2,
     "scale": 0.18
-  },
-  "policies": {
-    "ai": 2,
-    "weeb": 1
   },
   "regionSelector": {
     "annotation": {
@@ -341,12 +290,8 @@
     "historyLength": 60,
     "updateInterval": 3000
   },
-  "screenRecord": {
-    "savePath": "/home/xyz/Videos"
-  },
-  "screenSnip": {
-    "savePath": "/home/xyz/Pictures/Screenshots"
-  },
+  "screenRecord": {},
+  "screenSnip": {},
   "search": {
     "engineBaseUrl": "https://www.google.com/search?q=",
     "excludedSites": [
@@ -371,17 +316,6 @@
     "sloppy": false
   },
   "sidebar": {
-    "ai": {
-      "textFadeIn": false
-    },
-    "booru": {
-      "allowNsfw": false,
-      "defaultProvider": "yandere",
-      "limit": 20,
-      "zerochan": {
-        "username": "[unset]"
-      }
-    },
     "cornerOpen": {
       "bottom": false,
       "clickless": false,
@@ -431,10 +365,6 @@
         ]
       },
       "style": "android"
-    },
-    "translator": {
-      "delay": 300,
-      "enable": false
     }
   },
   "sounds": {

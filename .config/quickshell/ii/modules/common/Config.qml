@@ -124,15 +124,14 @@ Singleton {
             }
 
             property JsonObject apps: JsonObject {
-                property string bluetooth: "kcmshell6 kcm_bluetooth"
+                property string bluetooth: "blueman-manager"
                 property string changePassword: "kitty -1 --hold=yes fish -i -c 'passwd'"
-                property string network: "kcmshell6 kcm_networkmanagement"
-                property string manageUser: "kcmshell6 kcm_users"
-                property string networkEthernet: "kcmshell6 kcm_networkmanagement"
-                property string taskManager: "plasma-systemmonitor --page-name Processes"
+                property string network: "nm-connection-editor"
+                property string networkEthernet: "nm-connection-editor"
+                property string taskManager: "kitty -1 btop"
                 property string terminal: "kitty -1" // This is only for shell actions
                 property string update: "kitty -1 --hold=yes fish -i -c 'pkexec pacman -Syu'"
-                property string volumeMixer: `~/.config/hypr/hyprland/scripts/launch_first_available.sh "pavucontrol-qt" "pavucontrol"`
+                property string volumeMixer: "pavucontrol"
             }
 
             property JsonObject background: JsonObject {
@@ -304,10 +303,6 @@ Singleton {
 
             property JsonObject language: JsonObject {
                 property string ui: "auto" // UI language. "auto" for system locale, or specific language code like "zh_CN", "en_US"
-            }
-
-            property JsonObject launcher: JsonObject {
-                property list<string> pinnedApps: [ "org.kde.dolphin", "kitty", "cmake-gui"]
             }
 
             property JsonObject light: JsonObject {

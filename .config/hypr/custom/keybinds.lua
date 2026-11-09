@@ -1,4 +1,4 @@
-hl.bind("CTRL+SUPER+ALT+Slash", hl.dsp.exec_cmd("xdg-open ~/.config/hypr/custom/keybinds.lua"), {description = "Edit user keybinds"} )
+hl.bind("CTRL + SUPER + ALT + Minus", hl.dsp.exec_cmd("xdg-open ~/.config/hypr/custom/keybinds.lua"), { description = "User: Edit user keybinds" })
 
 -- Super tap opens search on release; pressing anything else while Super is held
 -- must interrupt that, otherwise Super+<key> also opens the launcher.
