@@ -164,7 +164,6 @@
     "utilButtons": {
       "showColorPicker": false,
       "showDarkModeToggle": true,
-      "showKeyboardToggle": true,
       "showMicToggle": false,
       "showPerformanceProfileToggle": false,
       "showScreenRecord": false,
@@ -218,19 +217,6 @@
   },
   "crosshair": {
     "code": "0;P;d;1;0l;10;0o;2;1b;0"
-  },
-  "dock": {
-    "enable": false,
-    "height": 60,
-    "hoverRegionHeight": 2,
-    "hoverToReveal": true,
-    "ignoredAppRegexes": [],
-    "monochromeIcons": true,
-    "pinnedApps": [
-      "org.kde.dolphin",
-      "kitty"
-    ],
-    "pinnedOnStartup": false
   },
   "hacks": {
     "arbitraryRaceConditionDelay": 20
@@ -308,10 +294,6 @@
   "osd": {
     "timeout": 1000
   },
-  "osk": {
-    "layout": "German",
-    "pinnedOnStartup": false
-  },
   "overlay": {
     "clickthroughOpacity": 0.8,
     "darkenScreen": true,
@@ -330,7 +312,6 @@
     "rows": 2,
     "scale": 0.18
   },
-  "panelFamily": "ii",
   "policies": {
     "ai": 2,
     "weeb": 1
@@ -488,40 +469,6 @@
     "checkInterval": 120,
     "enableCheck": true,
     "stronglyAdviseUpdateThreshold": 200
-  },
-  "waffles": {
-    "actionCenter": {
-      "toggles": [
-        "network",
-        "bluetooth",
-        "easyEffects",
-        "powerProfile",
-        "idleInhibitor",
-        "nightLight",
-        "darkMode",
-        "antiFlashbang",
-        "cloudflareWarp",
-        "mic",
-        "musicRecognition",
-        "notifications",
-        "onScreenKeyboard",
-        "gameMode",
-        "screenSnip",
-        "colorPicker"
-      ]
-    },
-    "bar": {
-      "bottom": true,
-      "leftAlignApps": false
-    },
-    "calendar": {
-      "force2CharDayOfWeek": true
-    },
-    "tweaks": {
-      "smootherMenuAnimations": true,
-      "smootherSearchBar": true,
-      "switchHandlePositionFix": true
-    }
   },
   "wallpaperSelector": {
     "useSystemFileDialog": false
