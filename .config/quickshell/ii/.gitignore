@@ -1,0 +1,4 @@
+/.qmlls.ini
+__pycache__/
+*.py[cod]
+*.orig

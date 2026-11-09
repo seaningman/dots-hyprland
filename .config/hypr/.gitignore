@@ -1,0 +1,5 @@
+# Written by matugen / switchwall.sh on every wallpaper change.
+# install.sh seeds the colour files from the *.default copies.
+/hyprland/colors.lua
+/hyprlock/colors.conf
+/custom/scripts/__restore_video_wallpaper.sh
