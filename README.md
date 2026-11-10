@@ -50,7 +50,7 @@ cd ~/my-dots
 
 4. Reboot and log in on TTY1. Hyprland starts by itself if you said yes to that question; otherwise run `start-hyprland`.
 
-The installer never asks questions: it runs straight through and takes the default for every choice (multilib, the keyring lines in `/etc/pam.d/login`, the battery udev rule, the wallpaper cut-out environment (about 1 GB) and Hyprland autostart on TTY1 are applied; fingerprint for sudo is skipped). Edits to `/etc` are printed as they happen and the originals are backed up. The only interaction left is your sudo password, if sudo asks for it.
+The installer never asks questions: it runs straight through and takes the default for every choice (multilib, the keyring lines in `/etc/pam.d/login`, fingerprint for sudo (when a reader is found), the battery udev rule, the wallpaper cut-out environment (about 1 GB) and Hyprland autostart on TTY1 are applied). Edits to `/etc` are printed as they happen and the originals are backed up. The only interaction left is your sudo password, if sudo asks for it.
 
 ### Existing system
 

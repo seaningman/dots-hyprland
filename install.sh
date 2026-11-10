@@ -455,7 +455,7 @@ if command -v lsusb >/dev/null && grep -Eiq 'fingerprint|06cb:|27c6:|138a:|1c7a:
     else
         info "to use it for sudo, this line would be added at the top of /etc/pam.d/sudo (the password keeps working):"
         info "    auth       sufficient   pam_fprintd.so"
-        if ask "Apply this edit to /etc/pam.d/sudo?" n; then
+        if ask "Apply this edit to /etc/pam.d/sudo?" y; then
             run sudo cp /etc/pam.d/sudo "/etc/pam.d/sudo.bak-$STAMP"
             run sudo sed -i '0,/^auth/s//auth       sufficient   pam_fprintd.so\n&/' /etc/pam.d/sudo
         fi
