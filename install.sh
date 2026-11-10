@@ -486,7 +486,7 @@ fi
 
 # Optional: the wallpaper change transition can outline the subject of a picture.
 # That needs a separate ~1 GB Python environment, so it is off unless asked for.
-if [[ ! -d $DATA_DIR/wallfx ]] && ask "Install the cut-out environment for the wallpaper transition (about 1 GB)?" n; then
+if [[ ! -d $DATA_DIR/wallfx ]] && ask "Install the cut-out environment for the wallpaper transition (about 1 GB)?" y; then
     run env ILLOGICAL_IMPULSE_VIRTUAL_ENV="$VENV" "$REPO/.config/quickshell/ii/scripts/wallfx/wallfx-venv.sh" instalar
 fi
 
