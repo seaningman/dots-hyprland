@@ -405,7 +405,7 @@ shopt -u nullglob nocaseglob
 step "Starting Hyprland"
 if [[ -e $AUTOSTART_FLAG ]]; then
     info "Hyprland already starts automatically on TTY1"
-elif ask "Start Hyprland automatically after logging in on TTY1?" n; then
+elif ask "Start Hyprland automatically after logging in on TTY1?" y; then
     run mkdir -p "$(dirname -- "$AUTOSTART_FLAG")"
     run touch "$AUTOSTART_FLAG"
 else
