@@ -19,7 +19,7 @@ AUTOSTART_FLAG="$STATE_DIR/my-dots/autostart-hyprland"
 TOTAL_STEPS=11
 
 DRY_RUN=false
-ASSUME_YES=false
+ASSUME_YES=true
 SKIP_PACKAGES=false
 
 LINKED=()
@@ -38,7 +38,7 @@ usage() {
 Usage: ./install.sh [options]
 
   --dry-run         Print every action, change nothing
-  --yes             No prompts, use the defaults
+  --yes             Accepted for compatibility (it never asks anyway)
   --skip-packages   Only link configs and do the setup steps
   --help            Show this help
 
@@ -60,18 +60,12 @@ run() {
     $DRY_RUN || "$@"
 }
 
-# ask "Question" y|n  -> returns 0 for yes. --yes, --dry-run and non-interactive runs take the default.
+# ask "Question" y|n  -> never prompts; always takes the default. Returns 0 for yes.
 ask() {
-    local question=$1 default=$2 reply hint='[y/N]'
+    local question=$1 default=$2 hint='[y/N]'
     [[ $default == y ]] && hint='[Y/n]'
-    if $ASSUME_YES || $DRY_RUN || [[ ! -t 0 ]]; then
-        info "$question $hint -> $default (default)"
-        [[ $default == y ]]
-        return
-    fi
-    read -r -p "    $question $hint " reply
-    reply=${reply:-$default}
-    [[ $reply =~ ^[Yy] ]]
+    info "$question $hint -> $default (default)"
+    [[ $default == y ]]
 }
 
 # One entry per line; blank lines and # comments are skipped.
